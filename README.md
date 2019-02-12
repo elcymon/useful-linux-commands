@@ -13,3 +13,4 @@ Truncate a text file to 3600 lines. This command deletes from line 3601 to the e
   
 ## USEFUL OPERATIONS
 1. kill a process using by name ```pkill <process-name>```
+1. view size of files and directories in a directory ```du -sh <path/to/directory>/*```

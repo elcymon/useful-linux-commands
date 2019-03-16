@@ -15,3 +15,5 @@ Some useful linux commands I have used from time to time for my work. I wish I s
 
 ## USEFUL OPERATIONS
 1. kill a process using by name ```pkill <process-name>```
+1. increase system volume beyond 100% ```pactl set-sink-volume 0 170%``` This sets volume of audio output 0 to 170%. A different value may be necessary depending on computer.
+1. Create multiple folders numbered serially ```mkdir {1..10}``` Creates folders whose names are 1 through 10. 

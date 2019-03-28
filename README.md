@@ -12,7 +12,7 @@ Some useful linux commands I have used from time to time for my work. I wish I s
 1. Truncate a text file to 3600 lines. This command deletes from line 3601 to the end sed -i '3601,$ d' <filename>. This file operation is done inplace, for other variants, look at [source](https://stackoverflow.com/questions/19017994/how-do-i-limit-or-truncate-text-file-by-number-of-lines)
 1. list 5 most recently modified files ```ls -1t | tail -5``` [source](https://stackoverflow.com/questions/15691359/how-can-i-list-ls-the-5-last-modified-files-in-a-directory)
 1. view size of files and directories in a directory ```du -sh <path/to/directory>/*```
-
+1. count number of files in a directory ```ld -l path/to/directory/pattern | grep ^- | wc -l ``` refer to [source](https://askubuntu.com/questions/34099/find-number-of-files-in-folder-and-sub-folders) for other similar commands.
 ## USEFUL OPERATIONS
 1. kill a process using by name ```pkill <process-name>```
 1. increase system volume beyond 100% ```pactl set-sink-volume 0 170%``` This sets volume of audio output 0 to 170%. A different value may be necessary depending on computer.

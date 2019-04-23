@@ -4,7 +4,9 @@ Some useful linux commands I have used from time to time for my work. I wish I s
 ## Video
 1. increase video playback rate x8: ```mencoder -speed 8 -o <output-file> -ovc lavc -oac mp3lame -srate 8000 <input-file>```
 1. extract frames from video at 1fps: ```ffmpeg -i <video-file> -vf fps=1 -vsync 0 <out-file>_%d.JPG``` [source](https://askubuntu.com/questions/1019356/how-can-l-use-ffmpeg-to-extract-frames-with-a-certain-fps-ans-scaling)
-1.  reducing size of video to half: ```ffmpeg -i input.mkv -vf "scale=iw/2:ih/2" half_the_frame_size.mkv```. Other approaches are available at [source](https://unix.stackexchange.com/questions/28803/how-can-i-reduce-a-videos-size-with-ffmpeg)
+1.  reducing size of video to half: ```ffmpeg -i input.mkv -vf "scale=iw/2:ih/2" half_the_frame_size.mkv```. Other approaches are available at [source](https://unix.stackexchange.com/questions/28803/how-can-i-reduce-a-videos-size-with-ffmpeg).
+
+1. reverse video and its audio using ffmpeg and sox. Work done in [this](https://nhs.io/reverse/) first extracts video frames as jpg the joins them in reverse order. To convert frames to images ```ffmpeg -i <video-name> -an -qscale 1 %06d.jpg```. To combine video frames to 50 fps video in reverse order use piping like so: ```cat $(ls -t *.jpg) | ffmpeg -r 50 -i - <reversed-video-name>```
 
 ## GIT
 1. copy a directory from master branch to current branch ```git checkout master -- <dir-name>``` [source](https://stackoverflow.com/questions/2668886/git-copy-all-files-in-a-directory-from-another-branch)

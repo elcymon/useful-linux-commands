@@ -23,3 +23,5 @@ Some useful linux commands I have used from time to time for my work. I wish I s
 1. increase system volume beyond 100% ```pactl set-sink-volume 0 170%``` This sets volume of audio output 0 to 170%. A different value may be necessary depending on computer.
 1. Create multiple folders numbered serially ```mkdir {1..10}``` Creates folders whose names are 1 through 10. 
 1. [Find pattern of strings in multiple files and replace them](https://www.cyberciti.biz/faq/how-to-use-sed-to-find-and-replace-text-in-files-in-linux-unix-shell/) ```sed -i 's/oldString/newString/g' fileNameOrPattern```. If there are ```/``` in the string pattern, you can use ```+``` instead: ```sed -i 's+oldString+newString+g' fileNameOrPattern```
+1. [Open file from command line Ubuntu 16.04](https://askubuntu.com/questions/43264/how-to-open-a-pdf-file-from-terminal) ```gvfs-open <file-name>```
+ 1. untar a file ```tar -xzvf <file-name>```

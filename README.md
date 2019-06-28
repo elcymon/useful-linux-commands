@@ -8,8 +8,8 @@ Some useful linux commands I have used from time to time for my work. I wish I s
 
 1. reverse video and its audio using ffmpeg and sox. Work done in [this](https://nhs.io/reverse/) first extracts video frames as jpg the joins them in reverse order. To convert frames to images ```ffmpeg -i <video-name> -an -qscale 1 %06d.jpg```. To combine video frames to 50 fps video in reverse order use piping like so: ```cat $(ls -t *.jpg) | ffmpeg -r 50 -i - <reversed-video-name>```
 
-1. [crop video using ffmpeg](https://askubuntu.com/questions/598324/convert-a-video-to-a-fixed-screen-size-by-cropping-and-resizing). This commands centre crops the ```<input-video>``` file ```ffmpeg -i <input-video> -filter:v "crop=width:height" -c:a copy <output-video-name>```
-
+1. [crop video using ffmpeg](https://askubuntu.com/questions/598324/convert-a-video-to-a-fixed-screen-size-by-cropping-and-resizing). This commands centre crops the ```<input-video>``` file ```ffmpeg -i <input-video> -filter:v "crop=width:height" -c:a copy <output-video-name>```cat *.png | ffmpeg -r 20 -i - -s 1080x720 -c:v libx264 -vf fps=50 <video-name>```
+1. parse images to ffmpeg to convert to video. ```
 ## GIT
 1. copy a directory from master branch to current branch ```git checkout master -- <dir-name>``` [source](https://stackoverflow.com/questions/2668886/git-copy-all-files-in-a-directory-from-another-branch)
 
